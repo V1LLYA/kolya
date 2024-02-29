@@ -12,7 +12,7 @@
                     <div class="desc-name">Память:</div><div class="desc-value">512Гб</div>
                     <div class="desc-name">ОЗУ:</div><div class="desc-value">12Гб</div>
                     </div>`,
-                image: "../images/main_product/1.webp", 
+                image: "images/main_product/1.webp", 
                 popular: true
             },
             {
@@ -26,7 +26,7 @@
                     <div class="desc-name">Память:</div><div class="desc-value">1Тб</div>
                     <div class="desc-name">ОЗУ:</div><div class="desc-value">12Гб</div>
                     </div>`,
-                image: "../images/main_product/s23u.jpg", 
+                image: "images/main_product/s23u.jpg", 
                 popular: true
             },
             {
@@ -40,7 +40,7 @@
                     <div class="desc-name">Память:</div><div class="desc-value">128Гб</div>
                     <div class="desc-name">ОЗУ:</div><div class="desc-value">8Гб</div>
                     </div>`,
-                image: "../images/main_product/poco.png",
+                image: "images/main_product/poco.png",
                 popular: true
             }
         ];
