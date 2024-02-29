@@ -1,0 +1,356 @@
+/* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Темно-серый цвет для фона */
+    color: #ecf0f1; /* Светло-серый цвет для текста */
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed; /* Делает шапку фиксированной */
+    top: 0; /* Прижимает шапку к верхней части экрана */
+    left: 0; /* Прижимает шапку к левой части экрана */
+    z-index: 1000; /* Убеждаемся, что шапка будет поверх других элементов */
+}
+
+
+/* Лого */
+.logo img {
+    width: 120px; /* Размер логотипа */
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+/* Навигационное меню */
+nav {
+    background-color: #34495e; /* Чуть более темный оттенок серого для подложки */
+    border-radius: 5px; /* Скругленные углы для подложки */
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Светло-серый цвет текста */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ecf0f1; /* Светло-серый цвет фона при наведении */
+    color: #2c3e50; /* Темно-серый цвет текста при наведении */
+}
+
+/* Переопределяем цвет фона шапки и навигационного меню для создания контраста */
+header, nav {
+    background-color: #2c3e50; /* Основной темно-серый цвет */
+}
+
+nav {
+    background-color: #34495e; /* Немного более темный оттенок для навигационного меню */
+}
+
+/* Слайдер */
+.slider {
+    position: relative;
+    margin-top: 20px;
+}
+
+.slides-container img {
+    display: none; /* Сначала скрываем все изображения */
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Показываем первый слайд по умолчанию */
+.slides-container img:first-child {
+    display: block;
+}
+
+.slider-controls span {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    user-select: none;
+    z-index: 10; /* Убедитесь, что кнопки находятся поверх слайдов */
+}
+
+#prev {
+    left: 10px; /* Отступ слева для кнопки prev */
+}
+
+#next {
+    right: 10px; /* Отступ справа для кнопки next */
+}
+
+
+/* Товары */
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Создает три колонки с равной шириной */
+    grid-gap: 20px; /* Расстояние между элементами */
+    margin-top: 20px; /* Отступ сверху для контейнера */
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Расстояние между товарами */
+    justify-content: center;
+}
+
+.product {
+    flex: 1 1 200px;
+    overflow: visible;
+    position: relative;
+    border: 1px solid #ccc; /* Убираем рамку */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Обновляем тень для более современного вида */
+    transition: transform 0.3s ease; /* Добавляем плавное преобразование */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; /* Фоновый цвет карточки */
+}
+
+.product:hover {
+    transform: translateY(-10px); /* При наведении карточка немного поднимается */
+}
+
+.product:hover .details {
+    transform: scaleY(1); /* Показывать детали */
+}
+
+.desc-grid {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Изменено на auto и 1fr для соответствия содержимому */
+    column-gap: 20px; /* Увеличен отступ между колонками для лучшего разделения */
+    row-gap: 5px; /* Отступ между строками */
+}
+
+.desc-name {
+    font-weight: bold; /* Жирное отображение для названия характеристики */
+    text-align: left; /* Выравнивание текста по левому краю */
+    padding-right: 0px; /* Добавлен правый отступ для создания пространства между названием и значением */
+}
+
+.desc-value {
+    text-align: left; /* Выравнивание значения характеристики по левому краю */
+}
+
+
+.product img {
+    width: 100%; /* Фиксированная ширина для всех изображений */
+    height: 300px; /* Фиксированная высота для всех изображений */
+    object-fit: cover; /* Обрезает изображение, сохраняя его пропорции */
+    border-radius: 5px; /* Скругление углов изображения */
+}
+
+.product h3 {
+    margin: 10px 0; /* Отступ заголовка */
+}
+
+.product p {
+    text-align: center; /* Выравнивание описания товара по центру */
+}
+
+/* Кнопка формы */
+/* Кнопка для открытия формы */
+#openFeedbackForm {
+    position: fixed; /* Фиксированное позиционирование */
+    right: 20px; /* Отступ справа */
+    bottom: 20px; /* Отступ снизу */
+    padding: 10px 20px; /* Паддинги для увеличения размера кнопки */
+    z-index: 100; /* Убедимся, что кнопка будет над контентом */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    background-color: #2c3e50; /* Цвет фона кнопки */
+    color: #ecf0f1; /* Цвет текста кнопки */
+    border: none; /* Убрать границу кнопки */
+    border-radius: 5px; /* Скругление углов */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+#openFeedbackForm:hover {
+    background-color: #34495e; /* Немного более светлый цвет для фона при наведении */
+}
+
+
+/* Форма обратной связи */
+.feedback form {
+    display: flex;
+    flex-direction: column; /* Элементы внутри формы располагаются вертикально */
+    gap: 10px; /* Расстояние между элементами формы */
+    position: fixed;
+    right: 20px;
+    bottom: 60px; /* Отодвигаем немного выше, чтобы не перекрывалась кнопкой */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 101; /* Выше, чем кнопка открытия */
+    width: auto; /* Или можно задать конкретную ширину */
+    max-width: 300px; /* Максимальная ширина для поддержания адаптивности */
+}
+
+/* Стилизация полей ввода и текстового поля */
+.feedback form input[type="text"],
+.feedback form input[type="email"],
+.feedback form textarea {
+    width: -webkit-fill-available; /* Полная ширина внутри контейнера формы */
+    padding: 8px;
+    margin: 5px 0; /* Небольшой отступ между полями */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Стилизация текстового поля */
+.feedback form textarea {
+    width: -webkit-fill-available; /* Полная ширина внутри контейнера формы */
+    padding: 8px;
+    margin: 5px 0; /* Небольшой отступ между полями */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Убираем возможность изменения размера */
+}
+
+/* Стилизация кнопки отправки формы */
+.feedback form button {
+    background-color: #2c3e50; /* Цвет фона, как у кнопки "Оставить отзыв" */
+    color: #ecf0f1; /* Цвет текста */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback form button:hover {
+    background-color: #34495e; /* Цвет фона при наведении */
+}
+
+.button-style {
+    padding: 10px 20px; /* Пример размера */
+    background-color: #4CAF50; /* Пример цвета фона */
+    color: white; /* Цвет текста */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Скругление углов */
+}
+
+/* Дополнительные стили для наведения */
+.button-style:hover {
+    background-color: #45a049;
+}
+
+form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box; /* Убедитесь, что padding включен в общую ширину */
+}
+
+header, footer {
+    width: 100%;
+    box-sizing: border-box; /* Убедитесь, что padding включен в общую ширину */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo, nav {
+        margin-bottom: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+/* Стили для всего скроллбара */
+::-webkit-scrollbar {
+    width: 6px; /* Ширина для вертикального скроллбара */
+    height: 6px; /* Высота для горизонтального скроллбара */
+}
+
+/* Стили для дорожки скроллбара */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона дорожки */
+    border-radius: 10px; /* Скругление углов дорожки */
+}
+
+/* Стили для ручки скроллбара */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Цвет ручки */
+    border-radius: 10px; /* Скругление углов ручки */
+}
+
+/* Стили для ручки скроллбара при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Цвет ручки при наведении */
+}

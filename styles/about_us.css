@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.company-info, .company-stats, .contact-info {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    background-color: #e9e9e9;
+}
+
+.company-stats {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-name {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Темно-серый цвет для фона */
+    color: #ecf0f1; /* Светло-серый цвет для текста */
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed; /* Делает шапку фиксированной */
+    top: 0; /* Прижимает шапку к верхней части экрана */
+    left: 0; /* Прижимает шапку к левой части экрана */
+    z-index: 1000; /* Убеждаемся, что шапка будет поверх других элементов */
+}
+
+
+/* Лого */
+.logo img {
+    width: 120px; /* Размер логотипа */
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+/* Навигационное меню */
+nav {
+    background-color: #34495e; /* Чуть более темный оттенок серого для подложки */
+    border-radius: 5px; /* Скругленные углы для подложки */
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Светло-серый цвет текста */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ecf0f1; /* Светло-серый цвет фона при наведении */
+    color: #2c3e50; /* Темно-серый цвет текста при наведении */
+}
+
+/* Переопределяем цвет фона шапки и навигационного меню для создания контраста */
+header, nav {
+    background-color: #2c3e50; /* Основной темно-серый цвет */
+}
+
+nav {
+    background-color: #34495e; /* Немного более темный оттенок для навигационного меню */
+}
+
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+}

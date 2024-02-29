@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Темно-серый цвет для фона */
+    color: #ecf0f1; /* Светло-серый цвет для текста */
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed; /* Делает шапку фиксированной */
+    top: 0; /* Прижимает шапку к верхней части экрана */
+    left: 0; /* Прижимает шапку к левой части экрана */
+    z-index: 1000; /* Убеждаемся, что шапка будет поверх других элементов */
+}
+
+
+/* Лого */
+.logo img {
+    width: 120px; /* Размер логотипа */
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+/* Навигационное меню */
+nav {
+    background-color: #34495e; /* Чуть более темный оттенок серого для подложки */
+    border-radius: 5px; /* Скругленные углы для подложки */
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ecf0f1; /* Светло-серый цвет текста */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ecf0f1; /* Светло-серый цвет фона при наведении */
+    color: #2c3e50; /* Темно-серый цвет текста при наведении */
+}
+
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s; /* Добавляем плавную анимацию */
+    cursor: pointer; /* Стиль курсора при наведении */
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень для эффекта "поднятия" */
+}
+
+button {
+    background-color: #3498db; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: background-color 0.3s;
+    cursor: pointer; /* Указатель курсора */
+}
+
+button:hover {
+    background-color: #2980b9; /* Темный оттенок кнопки при наведении */
+}
+
+
+
+/* Подвал */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Стили для всего скроллбара */
+::-webkit-scrollbar {
+    width: 6px; /* Ширина для вертикального скроллбара */
+    height: 6px; /* Высота для горизонтального скроллбара */
+}
+
+/* Стили для дорожки скроллбара */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона дорожки */
+    border-radius: 10px; /* Скругление углов дорожки */
+}
+
+/* Стили для ручки скроллбара */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Цвет ручки */
+    border-radius: 10px; /* Скругление углов ручки */
+}
+
+/* Стили для ручки скроллбара при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Цвет ручки при наведении */
+}
